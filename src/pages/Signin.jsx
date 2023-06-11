@@ -69,6 +69,10 @@ const Signin = () => {
     }
   };
 
+  const navToSignup = () => {
+    navigate('/signup')
+  }
+
   return (
     <>
       <StContainer>
@@ -110,6 +114,7 @@ const Signin = () => {
           <Button data-testid='signin-button' disabled={isButtonDisabled}>
             로그인
           </Button>
+          <StBox>회원이 아니세요? <NavButton onClick={navToSignup}>회원가입</NavButton></StBox>
         </StForm>
       </StContainer>
     </>
@@ -163,10 +168,23 @@ const StForm = styled.form`
 
 const StInputs = styled.div`
   width: 100%;
-  height: 100%;
+
   display: flex;
   justify-content: center;
   align-items: flex-start;
 
   flex-direction: column;
 `;
+
+const StBox = styled.div`
+  margin-top: 20px;
+  font-size: 16px;
+`
+
+const NavButton = styled.button`
+  border : none;
+  background: none;
+  font-size: 16px;
+  color: blue;
+  cursor: pointer;
+`
