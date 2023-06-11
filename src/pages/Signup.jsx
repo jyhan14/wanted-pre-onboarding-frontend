@@ -26,7 +26,7 @@ const Signup = () => {
   const [isButtonDisabled, setIsButtonDisabled] = useState(true);
 
   const regEmail = /@.*/;
-  const regPassword = /^.{7,}$/;
+  const regPassword = /^.{8,}$/;
 
   const onChangeHandler = (e) => {
     const { name, value } = e.target;
@@ -46,8 +46,9 @@ const Signup = () => {
     });
 
     setIsButtonDisabled(
-      !regEmail.test(user.email) || !regPassword.test(user.password)
+      !regEmail.test(user.email) || value.length < 8
     );
+    
   };
 
   const onSubmitHandler = async (e) => {
