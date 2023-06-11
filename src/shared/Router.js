@@ -1,20 +1,26 @@
 import React from 'react'
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import Signin from '../pages/Signin';
 import Signup from '../pages/Signup';
-import Main from '../pages/Main';
+import Todo from '../pages/Todo';
 
 function Router() {
+  const accessToken = localStorage.getItem('access_token');
+  
   return (
     <BrowserRouter>
-    <Routes>
+      <Routes>
+        {!accessToken ? (
+          <Route path="/" element={<Navigate to="/signin" replace />} />
+        ) : (
+          <Route path="/" element={<Navigate to="/todo" replace />} />
+        )}
         <Route path="/signin" element={<Signin />} />
         <Route path="/signup" element={<Signup />} />
-        <Route path="/" element={<Main />} />
-    </Routes>
-
+        <Route path="/todo" element={<Todo />} />
+      </Routes>
     </BrowserRouter>
-  )
+  );
 }
 
-export default Router
+export default Router;

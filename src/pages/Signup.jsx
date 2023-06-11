@@ -5,7 +5,7 @@ import styled from "styled-components";
 import { Wrapper, Text, Input, Button } from "../components";
 import { useNavigate } from "react-router-dom";
 
-const SignUp = () => {
+const Signup = () => {
   const navigate = useNavigate();
 
   const [user, setUser] = useState({
@@ -14,24 +14,16 @@ const SignUp = () => {
   });
 
   const signup = async (newUser) => {
-    try {
-      const res = await axios.post(
-        `${process.env.REACT_APP_SERVER_URL}/auth/signup`,
-        newUser
-      );
-      return res;
-    } catch (err) {
-      if (axios.isAxiosError(err)) {
-        alert(`Error : ${err.response?.data.msg}`);
-        return;
-      }
-      console.error("비처리에러 : ", err);
-    }
-    setUser({ email: "", password: "" });
+    const res = await axios.post(
+      `${process.env.REACT_APP_SERVER_URL}/auth/signup`,
+      newUser
+    );
+    return res;
   };
 
   const [emailInput, setEmailInput] = useState("");
   const [passwordInput, setPasswordInput] = useState("");
+  const [isButtonDisabled, setIsButtonDisabled] = useState(true);
 
   const regEmail = /@.*/;
   const regPassword = /^.{8,}$/;
@@ -52,21 +44,20 @@ const SignUp = () => {
       ...user,
       [name]: value,
     });
+
+    setIsButtonDisabled(
+      !regEmail.test(user.email) || !regPassword.test(user.password)
+    );
   };
 
   const onSubmitHandler = async (e) => {
     e.preventDefault();
 
-    if (user.email.trim() === "" || user.password.trim() === "") {
-      alert("모든 항목을 입력해주세요.");
-      return;
-    }
-
     try {
       await signup(user); // 회원가입 요청
       alert("회원가입이 완료되었습니다.");
       setUser({ email: "", password: "" }); // 입력값 초기화
-      navigate('/signin');
+      navigate("/signin");
     } catch (err) {
       console.error("회원가입 실패: ", err);
       alert("회원가입에 실패했습니다. 다시 시도해주세요.");
@@ -111,14 +102,16 @@ const SignUp = () => {
               </Text>
             </Wrapper>
           </StInputs>
-          <Button data-testid='signup-button'>회원가입</Button>
+          <Button data-testid='signup-button' disabled={isButtonDisabled}>
+            회원가입
+          </Button>
         </StForm>
       </StContainer>
     </>
   );
 };
 
-export default SignUp;
+export default Signup;
 
 const StContainer = styled.div`
   display: flex;
