@@ -1,70 +1,52 @@
-# Getting Started with Create React App
+# wanted-pre-onboarding-frontend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### 원티드 프리온보딩 프론트엔드 인턴십 (6월) 과제입니다.
+---
+## 📌 About Project
 
-## Available Scripts
+- Deploy 👉 [[__바로가기__]](https://wanted-pre-onboarding-frontend-jyhan14.vercel.app/)
 
-In the project directory, you can run:
+---
 
-### `npm start`
+<div align=center><h1>📚 STACKS</h1></div>
+<div align=center> 
+<img src="https://img.shields.io/badge/react-61DAFB?style=for-the-badge&logo=react&logoColor=black"> 
+<img src="https://img.shields.io/badge/reactRouter-CA4245?style=for-the-badge&logo=reactRouter&logoColor=white">
+<img alt="Python" src ="https://img.shields.io/badge/axios-blue.svg?&style=for-the-badge&logo=axios&logoColor=white"/>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+<img src="https://img.shields.io/badge/styledComponents-DB7093?style=for-the-badge&logo=styledComponents&logoColor=white">
+</div>
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## 📌 기능
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 회원가입
 
-### `npm run build`
+- email : @를 포함
+- password : 8자 이상
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### 로그인
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- email : @를 포함
+- password : 8자 이상
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### TODO
 
-### `npm run eject`
+-  TODO 목록,추가,수정,삭제
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+---
+## 📌 실행 방법
+- 배포사이트 접속 👉 [[__바로가기__]](https://wanted-pre-onboarding-frontend-jyhan14.vercel.app/)
+### 회원가입 / 로그인
+- 배포사이트 접속 시 로그인 페이지로 접속하고, 회원이 아니면 회원가입을 누릅니다.
+- email은 @를 포함하고, password는 8자 이상 입력해야 가입할 수 있습니다.
+- 회원가입을 누르면 로그인 페이지로 이동합니다.
+- 로그인을 하면 TODO 페이지로 이동합니다.
+- 로그인 한 적이 있으면 TODO를 추가할 수 있는 페이지로 접속합니다.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### TODO
+- 입력창에 TODO를 입력하고 추가버튼을 누르면 TODO를 추가 할 수 있습니다.
+- 체크박스를 눌러 TODO를 완료상태로 바꿀 수 있습니다.
+- 수정버튼을 눌러 TODO의 내용을 수정하고 제출버튼을 눌러 수정 완료 할 수 있습니다.
+- 삭제버튼을 눌러 TODO를 삭제 할 수 있습니다.
