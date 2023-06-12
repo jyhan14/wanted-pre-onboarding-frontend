@@ -61,9 +61,10 @@ const Signin = () => {
     try {
       const response = await signin(user); // 로그인 요청
       accessToken(response.data.access_token);
-      alert("로그인이 완료되었습니다.");
+      alert("로그인 성공!");
       setUser({ email: "", password: "" }); // 입력값 초기화
-      navigate("/todo");
+      window.location.reload();
+      navigate('/todo');
     } catch (err) {
       console.error("로그인 실패: ", err);
       alert("로그인에 실패했습니다. 다시 시도해주세요.");
