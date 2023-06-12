@@ -12,6 +12,8 @@
 <div align=center> 
 <img src="https://img.shields.io/badge/react-61DAFB?style=for-the-badge&logo=react&logoColor=black"> 
 <img src="https://img.shields.io/badge/reactRouter-CA4245?style=for-the-badge&logo=reactRouter&logoColor=white">
+<img alt="Python" src ="https://img.shields.io/badge/axios-blue.svg?&style=for-the-badge&logo=axios&logoColor=white"/>
+
 <img src="https://img.shields.io/badge/styledComponents-DB7093?style=for-the-badge&logo=styledComponents&logoColor=white">
 </div>
 
